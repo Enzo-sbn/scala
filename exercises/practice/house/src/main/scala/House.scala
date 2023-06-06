@@ -1,8 +1,8 @@
 object House{
 
-  val verses = Set("the house that jack built",
+  val verses = Array("the house that Jack built",
     "the malt that lay in",
-    "the rat that ate the malt",
+    "the rat that ate",
     "the cat that killed",
     "the dog that worried",
     "the cow with the crumpled horn that tossed",
@@ -14,7 +14,9 @@ object House{
     "the horse and the hound and the horn that belonged to")
 
   def getVerse(n: Int): String = ((n-1) to 0 by -1).map(verses(_)).mkString("This is ", " ", ".")
+
   def recite(start: Int, end: Int): String = {
     (start to end).map(getVerse(_)).mkString("\n") + "\n\n"
   }
 }
+
